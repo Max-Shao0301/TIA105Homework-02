@@ -4,4 +4,4 @@ bin/
 .project
 .DS_Store
 .idea
-.TIA105_02Homework.iml
+.*.iml
