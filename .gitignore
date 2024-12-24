@@ -4,4 +4,4 @@ bin/
 .project
 .DS_Store
 .idea
-.*.iml
+*.iml
