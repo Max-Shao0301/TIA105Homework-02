@@ -15,7 +15,7 @@ public class Homework01 {
             System.out.println("等腰三角形");
         } else if (data1 == 5 && data2 == 6 && data3 ==7) {
             System.out.println("其他三角形");
-        } else if (data1 == 0 || data2 ==0 ||  data3 ==0) {
+        } else if (data1 <= 0 || data2 <=0 ||  data3 <=0) {
             System.out.println("不是三角形");
         } else if (Math.pow(data1, 2) + Math.pow(data2, 2) == Math.pow(data3, 2)) {
             System.out.println("直角三角形");
