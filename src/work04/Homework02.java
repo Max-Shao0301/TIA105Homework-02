@@ -9,7 +9,7 @@ public class Homework02 {
 class ReverseString{
     public void reverse(String str) {
         char[] charArray = str.toCharArray();
-        char[] reversed = new char[charArray.length];//接收倒敘
+        char[] reversed = new char[charArray.length];//接收倒序
         for (int i = charArray.length - 1, j = 0; i >=0; i--, j++) {
             reversed[j] = charArray[i];
         }
