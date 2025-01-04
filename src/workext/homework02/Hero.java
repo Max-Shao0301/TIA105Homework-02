@@ -1,47 +1,39 @@
 package workext.homework02;
 
-public class Hero implements Action {
-	
-	private String name;
-	private int level;
-	private double exp;
-	
-	public Hero() {
-		this("David", 1, 0);
-	}
-	
-	public Hero(String name, int level, double exp) {
-		this.name = name;
-		this.level = level;
-		this.exp = exp;
-	}
+public abstract class Hero implements IAttack, IDefend, IDrink, IGoHome, IMove {
 
-	public String getName() {
-		return name;
-	}
+    private String name;
+    private int level;
+    private double exp;
 
 
-	@Override
-	public void defend() {
-		System.out.println(getName() + "做防禦動作");
-	}
+    public Hero(String name, int level, double exp) {
+        this.name = name;
+        this.level = level;
+        this.exp = exp;
+    }
 
-	@Override
-	public void attack() {
-		System.out.println(getName() + "攻擊");
-	}
 
-	public void move() {
-		System.out.println(getName() + "跑步");
-	}
+    public String getName() {
+        return name;
+    }
 
-	@Override
-	public void drink() {
-		System.out.println(getName() + "補水");
-	}
 
-	@Override
-	public void goHome() {
-		System.out.println(getName() + "回城");
-	}
+    @Override
+    public abstract void defend();
+
+    @Override
+    public abstract void attack();
+
+    public abstract void move();
+
+    @Override
+    public void drink() {
+        System.out.println(getName() + " 喝HP藥水");
+    }
+
+    @Override
+    public void goHome() {
+        System.out.println(getName() + " 回到城鎮");
+    }
 }
