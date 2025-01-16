@@ -19,6 +19,9 @@ public class Homework05 {
             }
         } catch (EOFException e) {
             System.out.println("資料讀取完畢！");;
+        }finally {
+            ois.close();
+            fis.close();
         }
     }
 }
